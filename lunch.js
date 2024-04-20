@@ -14,8 +14,16 @@
  */
 
 const whatToDoForLunch = function(hungry, availableTime) {
-  console.log("I don't know what to do!");
-}
+  if (hungry === true && availableTime < 20) {
+    return "Pick something up and eat it in the lab!"
+  } if (hungry === true && availableTime > 20 && availableTime < 30) {
+    return "Try a place nearby!"
+  } if (hungry === false) {
+    return "Get back to work."
+  } if (hungry === true && availableTime > 30) {
+    return "Remember, we are in bootcamp and we should get back to it!"
+};
+console.log("I don't know what to do!");
 
 
 /*
@@ -36,4 +44,4 @@ whatToDoForLunch(false, 30);
 console.log("---");
 
 console.log("I'm hungry and I have 15 minutes for lunch.");
-whatToDoForLunch(true, 15);
+whatToDoForLunch(true, 15);}
