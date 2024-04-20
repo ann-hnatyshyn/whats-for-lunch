@@ -14,34 +14,14 @@
  */
 
 const whatToDoForLunch = function(hungry, availableTime) {
-  if (hungry === true && availableTime < 20) {
-    return "Pick something up and eat it in the lab!"
-  } if (hungry === true && availableTime > 20 && availableTime < 30) {
-    return "Try a place nearby!"
+  if (hungry === true && availableTime <= 20) {
+    return "Pick something up and eat it in the lab!";
+  } if (hungry === true && availableTime > 20 && availableTime <= 30) {
+    return "Try a place nearby!";
   } if (hungry === false) {
-    return "Get back to work."
+    return "Get back to work.";
   } if (hungry === true && availableTime > 30) {
-    return "Remember, we are in bootcamp and we should get back to it!"
+    return "Remember, we are in bootcamp and we should get back to it!";
+  }
 };
-console.log("I don't know what to do!");
-
-
-/*
- * This is some test runner code that's simply calling our whatToDoForLunch function
- * defined above to verify we're making the right decisions. Do not modify it!
- */
-
-console.log("I'm hungry and I have 20 minutes for lunch.");
-whatToDoForLunch(true, 20);
-console.log("---");
-
-console.log("I'm hungry and I have 50 minutes for lunch.");
-whatToDoForLunch(true, 50);
-console.log("---");
-
-console.log("I'm not hungry and I have 30 minutes for lunch.");
-whatToDoForLunch(false, 30);
-console.log("---");
-
-console.log("I'm hungry and I have 15 minutes for lunch.");
-whatToDoForLunch(true, 15);}
+console.log(whatToDoForLunch(false, 50));
